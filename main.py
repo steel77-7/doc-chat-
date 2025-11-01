@@ -7,27 +7,26 @@ import sys
 
 
 def main():
-    print("""Welcome to doc chat
-            To start specify the file location of the pdf document you want to talk to :
+    print("""Welcome to doc chat\nTo start specify the file location of the pdf document you want to talk to :\n
         """)
     while True:
         file_path = input(": ")
         if not os.path.isfile(file_path):
             print(
-                "The provided file path does not exist \n Please enter a valid file path"
+                "The provided file path does not exist \nPlease enter a valid file path"\n
             )
             continue
 
         load_document(file_path)
         while True:
             print(
-                "Now Enter what would you like to ask to your documents or enter /exit to terminate"
+                "Now Enter what would you like to ask to your documents or enter /exit to terminate\n"
             )
             query = input(": ")
             if query[0] == "/":
                 if query != "/exit":
                     print(
-                        "Bitch dont try to act cocky just type the right command \n Now either enter the '/exit' cmd or the correct file path"
+                        "Bitch dont try to act cocky just type the right command \nNow either enter the '/exit' cmd or the correct file path\n"
                     )
                     continue
                 elif query == "/exit":

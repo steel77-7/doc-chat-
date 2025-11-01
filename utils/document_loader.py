@@ -43,7 +43,7 @@ def query_func(query_text, file_name):
     collection_name = file_name.replace("/", "")
     collection = chroma_client.get_or_create_collection(name=collection_name)
     result = collection.query(query_texts=[query_text])
-    print(result)
+    # print(result)
     return result["documents"]
 
 
